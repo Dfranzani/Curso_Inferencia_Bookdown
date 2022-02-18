@@ -15,11 +15,11 @@ link-citations: yes
 github-repo: rstudio/bookdown-demo#
 ---
 
-# Acerda del curso
+# Acerda del curso {-}
 
 El siguiente documento es un prueba de control de cambios en Ubuntu.
 
-
+Esta frase es para un segundo control de cambios en Ubuntu.- Hey !
 
 ```{r include=FALSE, eval=FALSE}
 # automatically create a bib database for R packages
