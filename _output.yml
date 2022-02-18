@@ -6,13 +6,6 @@ bookdown::gitbook:
         <li><a href="./">A Minimal Book Example</a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-    edit: https://github.com/USERNAME/REPO/edit/BRANCH/%s
-    download: ["pdf"]
-    toolbar:
-        position: "fixed"
-        download: "docs/Documento.pdf"
-        search: yes
-        edit: null
 bookdown::pdf_book:
   includes:
     in_header: preamble.tex
