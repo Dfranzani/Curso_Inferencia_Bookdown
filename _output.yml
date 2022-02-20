@@ -5,7 +5,7 @@ bookdown::gitbook:
       before: |
         <li><a href="./">Inferencia Estadística</a></li>
       after: |
-        <li><a href="https://github.com/dfranzani/Curso_Inferencia_Bookdown" target="blank">Repositorio de Github</a></li>
+        <li><a href="https://github.com/dfranzani/Curso_Inferencia_Bookdown/" target="blank">Repositorio de Github</a></li>
     toolbar:
       position: fixed
     edit: null

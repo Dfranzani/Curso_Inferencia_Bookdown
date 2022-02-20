@@ -119,23 +119,6 @@
 \usepackage[]{natbib}
 \bibliographystyle{plainnat}
 
-\usepackage{amsthm}
-\newtheorem{theorem}{Theorem}[chapter]
-\newtheorem{lemma}{Lemma}[chapter]
-\newtheorem{corollary}{Corollary}[chapter]
-\newtheorem{proposition}{Proposition}[chapter]
-\newtheorem{conjecture}{Conjecture}[chapter]
-\theoremstyle{definition}
-\newtheorem{definition}{Definition}[chapter]
-\theoremstyle{definition}
-\newtheorem{example}{Example}[chapter]
-\theoremstyle{definition}
-\newtheorem{exercise}{Exercise}[chapter]
-\theoremstyle{definition}
-\newtheorem{hypothesis}{Hypothesis}[chapter]
-\theoremstyle{remark}
-\newtheorem*{remark}{Remark}
-\newtheorem*{solution}{Solution}
 \begin{document}
 \maketitle
 
@@ -199,7 +182,7 @@ There are two steps to cross-reference any heading:
     To label an un-numbered heading, use: \texttt{\#\ Hello\ world\ \{-\#nice-label\}} or \texttt{\{\#\ Hello\ world\ .unnumbered\}}.
   \end{itemize}
 \item
-  Next, reference the labeled heading anywhere in the text using \texttt{\textbackslash{}@ref(nice-label)}; for example, please see Chapter \ref{cross}.
+  Next, reference the labeled heading anywhere in the text using \texttt{\textbackslash{}@ref(nice-label)}; for example, please see Chapter @ref(cross).
 
   \begin{itemize}
   \tightlist
@@ -213,7 +196,7 @@ There are two steps to cross-reference any heading:
 
 Figures and tables \emph{with captions} can also be cross-referenced from elsewhere in your book using \texttt{\textbackslash{}@ref(fig:chunk-label)} and \texttt{\textbackslash{}@ref(tab:chunk-label)}, respectively.
 
-See Figure \ref{fig:nice-fig}.
+See Figure @ref(fig:nice-fig).
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -228,10 +211,10 @@ See Figure \ref{fig:nice-fig}.
 
 }
 
-\caption{Here is a nice figure!}\label{fig:nice-fig}
+\caption{Here is a nice figure!}(\#fig:nice-fig)
 \end{figure}
 
-Don't miss Table \ref{tab:nice-tab}.
+Don't miss Table @ref(tab:nice-tab).
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -244,7 +227,7 @@ Don't miss Table \ref{tab:nice-tab}.
 
 \begin{table}
 
-\caption{\label{tab:nice-tab}Here is a nice table!}
+\caption{(\#tab:nice-tab)Here is a nice table!}
 \centering
 \begin{tabular}[t]{rr}
 \toprule
@@ -304,15 +287,15 @@ Here is an equation.
 
 \begin{equation} 
   f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}
-  \label{eq:binom}
+  (\#eq:binom)
 \end{equation}
 
-You may refer to using \texttt{\textbackslash{}@ref(eq:binom)}, like see Equation \eqref{eq:binom}.
+You may refer to using \texttt{\textbackslash{}@ref(eq:binom)}, like see Equation @ref(eq:binom).
 
 \hypertarget{theorems-and-proofs}{%
 \section{Theorems and proofs}\label{theorems-and-proofs}}
 
-Labeled theorems can be referenced in text using \texttt{\textbackslash{}@ref(thm:tri)}, for example, check out this smart theorem \ref{thm:tri}.
+Labeled theorems can be referenced in text using \texttt{\textbackslash{}@ref(thm:tri)}, for example, check out this smart theorem @ref(thm:tri).
 
 \begin{theorem}
 \protect\hypertarget{thm:tri}{}\label{thm:tri}For a right triangle, if \(c\) denotes the \emph{length} of the hypotenuse
