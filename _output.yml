@@ -3,9 +3,16 @@ bookdown::gitbook:
   config:
     toc:
       before: |
-        <li><a href="./">A Minimal Book Example</a></li>
+        <li><a href="./">Inferencia Estadística</a></li>
       after: |
-        <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+        <li><a href="https://github.com/dfranzani/Curso_Inferencia_Bookdown" target="blank">Repositorio de Github</a></li>
+    toolbar:
+      position: fixed
+    edit: null
+    download: false
+    fontsettings: null
+    sharing: null
+    info: false
 bookdown::pdf_book:
   includes:
     in_header: preamble.tex

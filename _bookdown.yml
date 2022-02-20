@@ -3,4 +3,4 @@ output_dir: "docs"
 book_filename: "Documento"
 language:
   ui:
-    chapter_name: "Chapter "
+    chapter_name: "Unidad"

@@ -1,12 +1,12 @@
 --- 
-title: "A Minimal Book Example"
-author: "John Doe"
+title: "Inferencia Estadística"
+author: "Daniel Franzani"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
-url: your book url like https://bookdown.org/yihui/bookdown
-cover-image: path to the social sharing image like images/cover.jpg
+# url: your book url like https://bookdown.org/yihui/bookdown
+# cover-image: path to the social sharing image like images/cover.jpg
 description: |
 #  This is a minimal example of using the bookdown package to write a book.
 #  The HTML output format for this example is bookdown::gitbook,
@@ -26,6 +26,8 @@ Tercer control de cambios Ubuntu! :D
 Cuarto control de cambios
 
 Quinto control de cambios
+
+El archivo que contiene el documento está [aquí](https://github.com/Dfranzani/Curso_Inferencia_Bookdown/blob/master/docs/Documento.pdf).
 
 ```{r include=FALSE, eval=FALSE}
 # automatically create a bib database for R packages
