@@ -2,10 +2,8 @@
 .Rhistory
 .RData
 .Ruserdata
-.aux
-.bbl
-.blg
+_bookdown_files
+Documento.aux
+Documento.log
+Documento.toc
 .log
-.toc
-.bib
-.tex
