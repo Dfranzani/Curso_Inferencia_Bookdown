@@ -3,14 +3,12 @@
 .RData
 .Ruserdata
 
-_bookdown_files/
+/_bookdown_files
 
-_bookdown_files
+Documento.aux
 
-*.aux
+Documento.log
 
-*.log
+Documento.toc
 
-*.toc
-
-*.log
+Documento.log
