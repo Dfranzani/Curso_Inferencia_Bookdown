@@ -1,5 +1,3 @@
-.Rproj.user
-.Rhistory
-.RData
-.Ruserdata
-_bookdown_files
+*
+!.gitignore
+!docs
