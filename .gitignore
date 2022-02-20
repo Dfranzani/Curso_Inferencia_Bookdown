@@ -1,3 +1,5 @@
 *
 !.gitignore
-!/docs
+!/docs/
+!/docs/Documento_files/
+!/docs/libs/
