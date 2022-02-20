@@ -2,13 +2,5 @@
 .Rhistory
 .RData
 .Ruserdata
-
-/_bookdown_files
-
-Documento.aux
-
-Documento.log
-
-Documento.toc
-
-Documento.log
+/_bookdown_files/
+Documento*

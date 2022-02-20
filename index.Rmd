@@ -27,6 +27,8 @@ Cuarto control de cambios
 
 Quinto control de cambios
 
+Sexto control de cambios
+
 El archivo que contiene el documento está [aquí](https://github.com/Dfranzani/Curso_Inferencia_Bookdown/blob/master/docs/Documento.pdf).
 
 ```{r include=FALSE, eval=FALSE}
