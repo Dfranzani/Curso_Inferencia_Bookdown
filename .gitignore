@@ -1,5 +1,6 @@
 /*
 !.gitignore
 !docs
-!docs/Documento_files/
+!docs/documento_files/
 !docs/libs/
+!README.md
