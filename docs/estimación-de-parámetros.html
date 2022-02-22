@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Unidad3 Estimación de parámetros | Inferencia Estadística</title>
+  <meta name="description" content="Unidad3 Estimación de parámetros | Inferencia Estadística" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Unidad3 Estimación de parámetros | Inferencia Estadística" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  <meta name="github-repo" content="rstudio/bookdown-demo#" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Unidad3 Estimación de parámetros | Inferencia Estadística" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="muestras-y-distribuciones-muestrales.html"/>
+<link rel="next" href="prueba-de-hipótesis.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Inferencia Estadística</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Acerca del curso</a></li>
+<li class="chapter" data-level="1" data-path="unidad-1.html"><a href="unidad-1.html"><i class="fa fa-check"></i><b>1</b> Unidad 1</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="unidad-1.html"><a href="unidad-1.html#definición-variable-aleatoria-continua"><i class="fa fa-check"></i><b>1.1</b> Definición variable aleatoria continua</a></li>
+<li class="chapter" data-level="1.2" data-path="unidad-1.html"><a href="unidad-1.html#función-de-densidad-y-funciónde-distribución"><i class="fa fa-check"></i><b>1.2</b> Función de densidad y funciónde distribución</a></li>
+<li class="chapter" data-level="1.3" data-path="unidad-1.html"><a href="unidad-1.html#momentos-de-una-v.a-continua-esperanza-varianza-curtosis-asimetría"><i class="fa fa-check"></i><b>1.3</b> Momentos de una v.a continua: esperanza, varianza, curtosis, asimetría</a></li>
+<li class="chapter" data-level="1.4" data-path="unidad-1.html"><a href="unidad-1.html#función-generadora-de-momentos"><i class="fa fa-check"></i><b>1.4</b> Función generadora de momentos</a></li>
+<li class="chapter" data-level="1.5" data-path="unidad-1.html"><a href="unidad-1.html#modelos-devaribales-aletatoria-continua"><i class="fa fa-check"></i><b>1.5</b> Modelos devaribales aletatoria continua</a></li>
+<li class="chapter" data-level="1.6" data-path="unidad-1.html"><a href="unidad-1.html#vectores-de-variables-aleatorias-continuas"><i class="fa fa-check"></i><b>1.6</b> Vectores de variables aleatorias continuas</a></li>
+<li class="chapter" data-level="1.7" data-path="unidad-1.html"><a href="unidad-1.html#probabilidad-condicionada"><i class="fa fa-check"></i><b>1.7</b> Probabilidad condicionada</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="muestras-y-distribuciones-muestrales.html"><a href="muestras-y-distribuciones-muestrales.html"><i class="fa fa-check"></i><b>2</b> Muestras y Distribuciones muestrales</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="muestras-y-distribuciones-muestrales.html"><a href="muestras-y-distribuciones-muestrales.html#conceptos-básicos-de-estadística-inferencial"><i class="fa fa-check"></i><b>2.1</b> Conceptos básicos de estadística inferencial</a></li>
+<li class="chapter" data-level="2.2" data-path="muestras-y-distribuciones-muestrales.html"><a href="muestras-y-distribuciones-muestrales.html#distribución-de-parámetros"><i class="fa fa-check"></i><b>2.2</b> Distribución de parámetros</a></li>
+<li class="chapter" data-level="2.3" data-path="muestras-y-distribuciones-muestrales.html"><a href="muestras-y-distribuciones-muestrales.html#distribuciones"><i class="fa fa-check"></i><b>2.3</b> Distribuciones</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="estimación-de-parámetros.html"><a href="estimación-de-parámetros.html"><i class="fa fa-check"></i><b>3</b> Estimación de parámetros</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="estimación-de-parámetros.html"><a href="estimación-de-parámetros.html#estimación-puntual"><i class="fa fa-check"></i><b>3.1</b> Estimación puntual</a></li>
+<li class="chapter" data-level="3.2" data-path="estimación-de-parámetros.html"><a href="estimación-de-parámetros.html#propiedades-de-los-estimadores-puntuales"><i class="fa fa-check"></i><b>3.2</b> Propiedades de los estimadores puntuales</a></li>
+<li class="chapter" data-level="3.3" data-path="estimación-de-parámetros.html"><a href="estimación-de-parámetros.html#estimación-por-intervalos"><i class="fa fa-check"></i><b>3.3</b> Estimación por intervalos</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="prueba-de-hipótesis.html"><a href="prueba-de-hipótesis.html"><i class="fa fa-check"></i><b>4</b> Prueba de hipótesis</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="prueba-de-hipótesis.html"><a href="prueba-de-hipótesis.html#hipótesis-estadisticas"><i class="fa fa-check"></i><b>4.1</b> Hipótesis estadisticas</a></li>
+<li class="chapter" data-level="4.2" data-path="prueba-de-hipótesis.html"><a href="prueba-de-hipótesis.html#tipos-de-errores"><i class="fa fa-check"></i><b>4.2</b> Tipos de errores</a></li>
+<li class="chapter" data-level="4.3" data-path="prueba-de-hipótesis.html"><a href="prueba-de-hipótesis.html#lema-de-neyman-y-pearson"><i class="fa fa-check"></i><b>4.3</b> Lema de Neyman y Pearson</a></li>
+<li class="chapter" data-level="4.4" data-path="prueba-de-hipótesis.html"><a href="prueba-de-hipótesis.html#pruebas-de-dos-parámetros"><i class="fa fa-check"></i><b>4.4</b> Pruebas de dos parámetros</a></li>
+<li class="chapter" data-level="4.5" data-path="prueba-de-hipótesis.html"><a href="prueba-de-hipótesis.html#pruebas-de-bondad-y-ajuste"><i class="fa fa-check"></i><b>4.5</b> Pruebas de bondad y ajuste</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/dfranzani/Curso_Inferencia_Bookdown/" target="blank">Repositorio de Github</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Inferencia Estadística</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="estimación-de-parámetros" class="section level1" number="3">
+<h1><span class="header-section-number">Unidad3</span> Estimación de parámetros</h1>
+<div id="estimación-puntual" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Estimación puntual</h2>
+</div>
+<div id="propiedades-de-los-estimadores-puntuales" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> Propiedades de los estimadores puntuales</h2>
+</div>
+<div id="estimación-por-intervalos" class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> Estimación por intervalos</h2>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="muestras-y-distribuciones-muestrales.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="prueba-de-hipótesis.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": null,
+"fontsettings": null,
+"edit": null,
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+},
+"toolbar": {
+"position": "fixed"
+},
+"info": false
+});
+});
+</script>
+
+</body>
+
+</html>
