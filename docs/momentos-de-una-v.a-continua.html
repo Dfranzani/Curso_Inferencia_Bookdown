@@ -144,7 +144,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="1.3.1" data-path="momentos-de-una-v.a-continua.html"><a href="momentos-de-una-v.a-continua.html#esperanza"><i class="fa fa-check"></i><b>1.3.1</b> Esperanza</a></li>
 <li class="chapter" data-level="1.3.2" data-path="momentos-de-una-v.a-continua.html"><a href="momentos-de-una-v.a-continua.html#momentos"><i class="fa fa-check"></i><b>1.3.2</b> Momentos</a></li>
-<li class="chapter" data-level="1.3.3" data-path="momentos-de-una-v.a-continua.html"><a href="momentos-de-una-v.a-continua.html#varianza-y-desviación-estándar"><i class="fa fa-check"></i><b>1.3.3</b> Varianza y Desviación EStándar</a></li>
+<li class="chapter" data-level="1.3.3" data-path="momentos-de-una-v.a-continua.html"><a href="momentos-de-una-v.a-continua.html#varianza-y-desviación-estándar"><i class="fa fa-check"></i><b>1.3.3</b> Varianza y Desviación Estándar</a></li>
 <li class="chapter" data-level="1.3.4" data-path="momentos-de-una-v.a-continua.html"><a href="momentos-de-una-v.a-continua.html#momentos-normalizados"><i class="fa fa-check"></i><b>1.3.4</b> Momentos normalizados</a></li>
 </ul></li>
 <li class="chapter" data-level="1.4" data-path="función-generadora-de-momentos.html"><a href="función-generadora-de-momentos.html"><i class="fa fa-check"></i><b>1.4</b> Función generadora de momentos</a></li>
@@ -254,14 +254,88 @@ Figure 1.2: Función densidad y valor esperado.
 <p>En este caso, nuevamente nos encontramos con una variación de la función <span class="math inline">\(g(X)\)</span>. Además, dos de la propiedades más relevantes de estos momentos son las siguientes:</p>
 <ol style="list-style-type: decimal">
 <li><p>Si <span class="math inline">\(E_X(X^n) &lt; \infty\)</span>, entonces <span class="math inline">\(E_X\lbrace(X-\mu)^n\rbrace &lt; \infty\)</span>, para todo entero <span class="math inline">\(n&gt;0\)</span>.</p></li>
-<li><p>Si <span class="math inline">\(E_X(X^n) &lt; \infty\)</span>, entonces <span class="math inline">\(E_X(X^m) &lt; \infty\)</span>, para todos enteros <span class="math inline">\(k&gt;m&gt;0\)</span>.</p></li>
+<li><p>Si <span class="math inline">\(E_X(X^n) &lt; \infty\)</span>, entonces <span class="math inline">\(E_X(X^m) &lt; \infty\)</span>, para todos enteros <span class="math inline">\(n&gt;m&gt;0\)</span>.</p></li>
+</ol>
+<p>Otras propiedades referente a los momentos centrados son:</p>
+<ol style="list-style-type: decimal">
+<li><p>EL 3er momento centrado en una medida de “desequilibrio” de una distribución: para una distribución simétrica su valor es 0.</p></li>
+<li><p>El 4to momento centrado es una medida de la “altura” de unan distribución, en comparación a un distribución normal con la misma varianza.</p></li>
 </ol>
 </div>
 <div id="varianza-y-desviación-estándar" class="section level3" number="1.3.3">
-<h3><span class="header-section-number">1.3.3</span> Varianza y Desviación EStándar</h3>
+<h3><span class="header-section-number">1.3.3</span> Varianza y Desviación Estándar</h3>
+<p>Los conceptos de varianza y desviación estándar no son ajenos, seguramente ya han conocido ciertas fórmulas para determinarlas. Sin embargo, una definición más formal es:</p>
+<p><strong>Definición:</strong> La varianza de una v.a <span class="math inline">\(X\)</span>, es el segundo momento central</p>
+<p><span class="math display" id="eq:varianza">\[\begin{equation}
+\sigma_X^2 = \mu_2 = Var_X(X) = E_X\lbrace (X-\mu)^2 \rbrace.
+\tag{1.11}
+\end{equation}\]</span></p>
+<p>La raíz cuadrada de la varianza <span class="math inline">\(\sigma_X(X)\)</span>, es la desviación estándar de <span class="math inline">\(X\)</span>. En este caso, la interpretación de la varianza es la dispersión cuadrática de los datos respecto a la media, mientras que que la desviación estándar es al dispersión respecto a los datos (cada una bajo la influencia de la unidad de medida de la variable aleatoria).</p>
+<p><strong>Ejemplo:</strong> Consideremos la función de densidad</p>
+<p><span class="math display">\[
+f_X(x) = \frac{1}{\lambda}e^{-x/\lambda} \text{, } 0\leq x &lt; \infty.
+\]</span>
+Determinemos la varianza.</p>
+<p>Como ya sabemos, la media es <span class="math inline">\(\mu = E_X(X) = \lambda\)</span>. Por lo tanto,</p>
+<p><span class="math display">\[\begin{equation}
+\notag
+\begin{split}
+Var_X(X) &amp;= E_X\lbrace (X-\mu)^2 \rbrace\\
+&amp;= \int_0^{\infty}(x-\lambda)^2\frac{1}{\lambda}e^{-x/\lambda}dx\\
+&amp;= \int_0^{\infty}\left(\frac{x^2}{\lambda} -2x +\lambda\right)e^{-x/\lambda}dx\\
+&amp;= \frac{1}{\lambda}\int_0^{\infty}x^2e^{-x/\lambda}dx -2 \int_0^{\infty}xe^{-x/\lambda}dx + \lambda\int_0^{\infty} e^{-x/\lambda}dx\\
+&amp;= \frac{1}{\lambda}\int_0^{\infty}x^2e^{-x/\lambda}dx -2 \left(-x\lambda e^{-x/\lambda} + \int_0^{\infty}\lambda  e^{-x/\lambda}dx\right) -\lambda^2e^{-x/\lambda}\\
+&amp;= \frac{1}{\lambda}\int_0^{\infty}x^2e^{-x/\lambda}dx +2x\lambda e^{-x/\lambda} + 2\lambda^2 e^{-x/\lambda} -\lambda^2e^{-x/\lambda}\\
+&amp;= \frac{1}{\lambda}\left( -\lambda x^2e^{-x/\lambda} + 2\lambda\int_0^{\infty}xe^{-x/\lambda}dx \right) + 2x\lambda e^{-x/\lambda} + \lambda^2  e^{-x/\lambda}\\
+&amp;= \left.- x^2e^{-x/\lambda} - 2x\lambda e^{-x/\lambda} - 2\lambda^2 e^{-x/\lambda} + 2x\lambda e^{-x/\lambda} + \lambda^2  e^{-x/\lambda}\right|_0^{\infty}\\
+&amp;= \left.\left(- x^2e^{-x/\lambda} - 2x\lambda e^{-x/\lambda} - 2\lambda^2 e^{-x/\lambda} + 2x\lambda e^{-x/\lambda} + \lambda^2  e^{-x/\lambda}\right)\right|_0^{\infty}\\
+&amp;= \left.\left(- x^2e^{-x/\lambda} - \lambda^2 e^{-x/\lambda} \right)\right|_0^{\infty}\\
+&amp;= 0 - 0 - 0 + \lambda^2\\
+&amp;= \lambda^2\\
+\end{split}
+\end{equation}\]</span></p>
+<p>Luego, la desviación estándar es <span class="math inline">\(\sqrt{\sigma^2_X(X)} = \sigma_X(X) = \lambda\)</span>.</p>
+<p>Hasta el momento, la nomenclatura que hemos usado corresponde a datos poblacionales (<span class="math inline">\(\mu = E_X(X)\)</span>, <span class="math inline">\(\sigma^2_X(X)\)</span> y <span class="math inline">\(\sigma_X(X)\)</span>). Más adelante, veremos las expresiones correspondientes a los casos muestrales, en los cuales aparecen las fórmulas que tanto conocemos y que se enseñan en el periodo escolar.</p>
+<p>Algunas de las propiedades de la varianza son:</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(VarX(aX+b) = a^2Var_X(X)\)</span>, con <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span> constantes cualquiera.</p></li>
+<li><p><span class="math inline">\(var_X(X) = E_X(X^2) - [E_X(X)]^2\)</span>.</p></li>
+</ol>
 </div>
 <div id="momentos-normalizados" class="section level3" number="1.3.4">
 <h3><span class="header-section-number">1.3.4</span> Momentos normalizados</h3>
+<p>Los momentos normalizados son similares a los momentos centrales, pero incorporan la n-pontencia de la desviación estándar de la variable aleatoria.</p>
+<p><span class="math display" id="eq:momentonormal">\[\begin{equation}
+\beta_n = \frac{E_X\lbrace(X-\mu)^n\rbrace}{\sigma_X^n}
+\tag{1.12}
+\end{equation}\]</span></p>
+<p>Algunas propiedades de estos momentos son las siguientes:</p>
+<ol style="list-style-type: decimal">
+<li>El 3er momento normalizado (<span class="math inline">\(\beta_3\)</span>) se conoce como <strong>asimetría</strong>. Una distribución asimétrica (valores de la v.a <span class="math inline">\(X\)</span>) hacia la izquierda (derecha) tiene la cola izquierda (derecha) más larga y tiene asimetría negativa (positiva). En la figura <a href="momentos-de-una-v.a-continua.html#fig:asimetria">1.3</a>, se aprecia un ejemplo de la asimetría positiva.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:asimetria"></span>
+<img src="documento_files/figure-html/asimetria-1.png" alt="Coeficiente de asimetría hacia la derecha" width="768" />
+<p class="caption">
+Figure 1.3: Coeficiente de asimetría hacia la derecha
+</p>
+</div>
+<p>En capítulos posteriores, veremos como es posible determinar un coeficiente de asimetría a partir de una muestra.</p>
+<ol start="2" style="list-style-type: decimal">
+<li><p>El 4to momento normalizado de una distribución normal es 3. Más adelante aclararemos, que es una distribución normal.</p></li>
+<li><p>El coeficiente de curtosis (<span class="math inline">\(\gamma_2\)</span>) corresponde al 4to momento normalizado menos 3.
+<span class="math display" id="eq:curtosis">\[\begin{equation}
+\gamma_2 = \frac{E_X\lbrace(X-\mu)^4\rbrace}{\sigma_X^4} -3
+\tag{1.13}
+\end{equation}\]</span>
+Las distribuciones con curtosis positiva se denominan leptocúrticas, y las distribuciones con curtosis negativa se denominan platicúrticas. La figura <a href="momentos-de-una-v.a-continua.html#fig:curtosis">1.4</a> se evidencia un ejemplo de lo mencionado.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:curtosis"></span>
+<img src="documento_files/figure-html/curtosis-1.png" alt="Coeficiente de curtosis" width="768" />
+<p class="caption">
+Figure 1.4: Coeficiente de curtosis
+</p>
+</div>
+<p>En capítulos posteriores, veremos como es posible determinar un coeficiente de curtosis a partir de una muestra.</p>
 </div>
 </div>
             </section>
