@@ -148,7 +148,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.3.4" data-path="momentos-de-una-v.a-continua.html"><a href="momentos-de-una-v.a-continua.html#momentos-normalizados"><i class="fa fa-check"></i><b>1.3.4</b> Momentos normalizados</a></li>
 </ul></li>
 <li class="chapter" data-level="1.4" data-path="función-generadora-de-momentos.html"><a href="función-generadora-de-momentos.html"><i class="fa fa-check"></i><b>1.4</b> Función generadora de momentos</a></li>
-<li class="chapter" data-level="1.5" data-path="modelos-de-v.a-continua.html"><a href="modelos-de-v.a-continua.html"><i class="fa fa-check"></i><b>1.5</b> Modelos de v.a continua</a></li>
+<li class="chapter" data-level="1.5" data-path="modelos-de-v.a-continua.html"><a href="modelos-de-v.a-continua.html"><i class="fa fa-check"></i><b>1.5</b> Modelos de v.a continua</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="modelos-de-v.a-continua.html"><a href="modelos-de-v.a-continua.html#distribución-uniforme"><i class="fa fa-check"></i><b>1.5.1</b> Distribución Uniforme</a></li>
+<li class="chapter" data-level="1.5.2" data-path="modelos-de-v.a-continua.html"><a href="modelos-de-v.a-continua.html#distribución-exponencial"><i class="fa fa-check"></i><b>1.5.2</b> Distribución Exponencial</a></li>
+<li class="chapter" data-level="1.5.3" data-path="modelos-de-v.a-continua.html"><a href="modelos-de-v.a-continua.html#distribución-normal"><i class="fa fa-check"></i><b>1.5.3</b> Distribución Normal</a></li>
+</ul></li>
 <li class="chapter" data-level="1.6" data-path="vectores-de-v.a-continuas.html"><a href="vectores-de-v.a-continuas.html"><i class="fa fa-check"></i><b>1.6</b> Vectores de v.a continuas</a></li>
 <li class="chapter" data-level="1.7" data-path="probabilidad-condicionada.html"><a href="probabilidad-condicionada.html"><i class="fa fa-check"></i><b>1.7</b> Probabilidad condicionada</a></li>
 </ul></li>
@@ -194,6 +199,50 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="función-generadora-de-momentos" class="section level2" number="1.4">
 <h2><span class="header-section-number">1.4</span> Función generadora de momentos</h2>
+<p>La función generadora de momentos (FGM) permite calcular los distintos momentos. La expresión que la defines es</p>
+<p><span class="math display" id="eq:fgm">\[\begin{equation}
+M_X(t) = E_X(e^{tX}),
+\tag{1.14}
+\end{equation}\]</span>
+provisto que la esperanza exista para <span class="math inline">\(t\)</span> en un alguna vecindad del 0. Si la esperanza no existe en un vecindad de 0, entonces decimos que la FGM no existe.</p>
+<p>La expresión que permite calcular los momentos es la siguiente
+<span class="math display" id="eq:fgm2">\[\begin{equation}
+E_X(X^n) = M^{(n)}_X(0),
+\tag{1.15}
+\end{equation}\]</span></p>
+<p>donde</p>
+<p><span class="math display">\[\begin{equation}
+\notag
+M^{(n)}_X(t) = \left.\frac{d^n}{dt^n}M_X(t)\right|_{t=0}.
+\end{equation}\]</span></p>
+<p><strong>Ejemplo:</strong> Determinar la FGM de <span class="math inline">\(X\)</span> una variable aleatoria con función de distribución
+<span class="math display">\[\begin{equation}
+\notag
+F_X(x) = 1 - e^{-x/100} \text{, } x&gt;0.
+\end{equation}\]</span></p>
+<p>Para ello, utilizaremos la definición.</p>
+<p><span class="math display">\[\begin{equation}
+\notag
+\begin{split}
+M_X(t) &amp;= E(e^{tx}) = \int_{0}^{\infty}e^{tx}f_X(x)dx = \int_{0}^{\infty}e^{tx}F&#39;_X(x)dx\\
+&amp;= \int_{0}^{\infty}e^{tx}\frac{e^{-x/100}}{100}dx = \frac{1}{100}\int_{0}^{\infty}e^{-x/100+tx}dx\\
+&amp;= \frac{1}{100}\int_{0}^{\infty}e^{-x(1/100-t)}dx =  \frac{1}{100}\frac{-1}{1/100-t}\left. e^{-x(1/100-t)}\right|_{0}^{\infty} \text{, } t &lt; 1/100 \\
+&amp;= \frac{-1}{1-100t} (0-1)\\
+&amp;=(1-100t)^{-1}
+\end{split}
+\end{equation}\]</span></p>
+<p>Como es posible apreciar, no se contaba directamente con la función de densidad, por lo que en la segunda integral la expresamos como la derivada de la función de distribución, lo cual es posible gracias a las propiedades ya vistas de está función.</p>
+<p>Si ahora estamos interesados en obtener el primer momento, es decir la media, el procedimiento es el siguiente</p>
+<p><span class="math display">\[\begin{equation}
+\notag
+\mu = E(X) = E(X^1) = M_X^{(1)}(0) = -(1-100t)^{-2}(-100), t=0 = 100.
+\end{equation}\]</span></p>
+<p>En este caso, el primer momento es de potencia 1, por lo que solo hay que derivar una sola vez la función generadora de momentos, para luego evaluar <span class="math inline">\(t=0\)</span>.</p>
+<p>Algunas de las propiedades más relevantes de FGM son:</p>
+<ol style="list-style-type: decimal">
+<li><p>Sean <span class="math inline">\(F_X\)</span> y <span class="math inline">\(F_Y\)</span> dos funciones de distribución de variables aleatorias con todos los momentos finitos. Si las FGM existen y <span class="math inline">\(M_X(t) = M_Y(t)\)</span>, para todo <span class="math inline">\(t\)</span> en alguna vecindad del cero, entonces <span class="math inline">\(F_X(u) = F_Y(u)\)</span> para todo <span class="math inline">\(u\)</span>. Esto quiere decir que dos FGM distintas pertenecen a dos funciones de distribución distintas (lo mismo para la negación).</p></li>
+<li><p>Dada una variable aleatoria <span class="math inline">\(X\)</span> cuya FGM existe, entonces <span class="math inline">\(M_{aX+b}(t) = \displaystyle{e^{bt}M_X(at)}\)</span>, para cualquier par de constantes <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span>.</p></li>
+</ol>
 </div>
             </section>
 
