@@ -154,8 +154,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.5.2" data-path="modelos-de-v.a-continua.html"><a href="modelos-de-v.a-continua.html#distribución-exponencial"><i class="fa fa-check"></i><b>1.5.2</b> Distribución Exponencial</a></li>
 <li class="chapter" data-level="1.5.3" data-path="modelos-de-v.a-continua.html"><a href="modelos-de-v.a-continua.html#distribución-normal"><i class="fa fa-check"></i><b>1.5.3</b> Distribución Normal</a></li>
 </ul></li>
-<li class="chapter" data-level="1.6" data-path="vectores-de-v.a-continuas.html"><a href="vectores-de-v.a-continuas.html"><i class="fa fa-check"></i><b>1.6</b> Vectores de v.a continuas</a></li>
-<li class="chapter" data-level="1.7" data-path="probabilidad-condicionada.html"><a href="probabilidad-condicionada.html"><i class="fa fa-check"></i><b>1.7</b> Probabilidad condicionada</a></li>
+<li class="chapter" data-level="1.6" data-path="vectores-de-v.a-continuas.html"><a href="vectores-de-v.a-continuas.html"><i class="fa fa-check"></i><b>1.6</b> Vectores de v.a continuas</a>
+<ul>
+<li class="chapter" data-level="1.6.1" data-path="vectores-de-v.a-continuas.html"><a href="vectores-de-v.a-continuas.html#función-de-densidad-conjunta"><i class="fa fa-check"></i><b>1.6.1</b> Función de densidad conjunta</a></li>
+<li class="chapter" data-level="1.6.2" data-path="vectores-de-v.a-continuas.html"><a href="vectores-de-v.a-continuas.html#función-de-distribución-conjunta-continua"><i class="fa fa-check"></i><b>1.6.2</b> Función de distribución conjunta continua</a></li>
+<li class="chapter" data-level="1.6.3" data-path="vectores-de-v.a-continuas.html"><a href="vectores-de-v.a-continuas.html#esperanza-conjunta-conitnua"><i class="fa fa-check"></i><b>1.6.3</b> Esperanza conjunta conitnua</a></li>
+<li class="chapter" data-level="1.6.4" data-path="vectores-de-v.a-continuas.html"><a href="vectores-de-v.a-continuas.html#función-de-densidad-marginal-continua"><i class="fa fa-check"></i><b>1.6.4</b> Función de densidad marginal continua</a></li>
+</ul></li>
+<li class="chapter" data-level="1.7" data-path="probabilidad-condicionada.html"><a href="probabilidad-condicionada.html"><i class="fa fa-check"></i><b>1.7</b> Probabilidad condicionada</a>
+<ul>
+<li class="chapter" data-level="1.7.1" data-path="probabilidad-condicionada.html"><a href="probabilidad-condicionada.html#densidad-condicional"><i class="fa fa-check"></i><b>1.7.1</b> Densidad condicional</a></li>
+<li class="chapter" data-level="1.7.2" data-path="probabilidad-condicionada.html"><a href="probabilidad-condicionada.html#esperanza-condicional"><i class="fa fa-check"></i><b>1.7.2</b> Esperanza condicional</a></li>
+<li class="chapter" data-level="1.7.3" data-path="probabilidad-condicionada.html"><a href="probabilidad-condicionada.html#varianza-condicional"><i class="fa fa-check"></i><b>1.7.3</b> Varianza condicional</a></li>
+<li class="chapter" data-level="1.7.4" data-path="probabilidad-condicionada.html"><a href="probabilidad-condicionada.html#independencia"><i class="fa fa-check"></i><b>1.7.4</b> Independencia</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="muestras-y-distribuciones-muestrales.html"><a href="muestras-y-distribuciones-muestrales.html"><i class="fa fa-check"></i><b>2</b> Muestras y Distribuciones muestrales</a>
 <ul>
@@ -199,6 +211,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="modelos-de-v.a-continua" class="section level2" number="1.5">
 <h2><span class="header-section-number">1.5</span> Modelos de v.a continua</h2>
+<p>Los modelos de v.a intentan modelar fenómenos reales (valga la redundancia), sin embargo, esto nunca es cierto. Es bien sabido que en estadística ningún modelo es correcto, pero si son útiles y hacen un buen trabajo en general.</p>
+<p>En el caso de las v.a continuas, normalmente se da a conocer la función de densidad asociado a la variable aleatoria, a pesar de que el nombre contiene la palabra “Distribución.”</p>
+<p>A partir de aquí, revisaremos los 3 modelos de variables aleatorias más frecuentemente usados, más aún, daremos el detalle de la notación, su esperanza y varianza asociada.</p>
 <div id="distribución-uniforme" class="section level3" number="1.5.1">
 <h3><span class="header-section-number">1.5.1</span> Distribución Uniforme</h3>
 <p>Una variable aleatoria tiene <strong>distribución uniforme</strong> es una variable aleatoria que toma valores en el intervalo <span class="math inline">\((a,b)\)</span>, donde <span class="math inline">\(a&lt;b\)</span> son números arbitrarios. La función de densidad de una variable aleatoria uniforme está dada por:
@@ -216,8 +231,13 @@ f_X(x) = \left\lbrace
 <li><p><strong>Esperanza</strong>: <span class="math inline">\(E(X)=\frac{1}{2}(a+b)\)</span></p></li>
 <li><p><strong>Varianza</strong>: <span class="math inline">\(Var(X) = \frac{1}{12}(b-a)^2\)</span></p></li>
 </ul>
-<p>La figura , muestra un ejemplo de la función densidad asociada a esta distribución.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="modelos-de-v.a-continua.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span></code></pre></div>
+<p>Este modelo, plantea una situación equiprobable para todos los puntos del dominio, tal como se puede apreciar en la figura <a href="modelos-de-v.a-continua.html#fig:uniforme">1.5</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:uniforme"></span>
+<img src="documento_files/figure-html/uniforme-1.png" alt="Ejemplo distribucióin uniforme" width="768" />
+<p class="caption">
+Figure 1.5: Ejemplo distribucióin uniforme
+</p>
+</div>
 </div>
 <div id="distribución-exponencial" class="section level3" number="1.5.2">
 <h3><span class="header-section-number">1.5.2</span> Distribución Exponencial</h3>
@@ -236,6 +256,13 @@ f_X(x)= \left\lbrace
 <li><p><strong>Esperanza</strong>: <span class="math inline">\(E(X)=\frac{1}{\lambda}\)</span></p></li>
 <li><p><strong>Varianza</strong>: <span class="math inline">\(Var(X) = \frac{1}{\lambda^2}\)</span></p></li>
 </ul>
+<p>La distribución exponencial tiene un comportamiento decreciente, tal como se observa en la figura <a href="modelos-de-v.a-continua.html#fig:exponencial">1.6</a>. Esta distribución se usa en fenómenos de sobrevivencia, es decir, analiza un estado en concreto hasta que ocurre un cambio, por ejemplo tener el teléfono sin vibrar hasta recibir una llamada.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:exponencial"></span>
+<img src="documento_files/figure-html/exponencial-1.png" alt="Ejemplo distribucióin exponencial" width="768" />
+<p class="caption">
+Figure 1.6: Ejemplo distribucióin exponencial
+</p>
+</div>
 </div>
 <div id="distribución-normal" class="section level3" number="1.5.3">
 <h3><span class="header-section-number">1.5.3</span> Distribución Normal</h3>
@@ -249,6 +276,14 @@ f_X(x)= (2\pi \sigma^2)^{-1/2}\exp\left\lbrace -\frac{(x-\mu)^2}{2\sigma^2} \rig
 <li><p><strong>Esperanza</strong>: <span class="math inline">\(E(X)=\mu\)</span></p></li>
 <li><p><strong>Varianza</strong>: <span class="math inline">\(Var(X) = \sigma^2\)</span></p></li>
 </ul>
+<p>La distribución normal es aquella que más es utilizada en estadística, y da origen a multitud de planteamientos. La principal característica es, que depende de dos constantes <span class="math inline">\(\mu\)</span> y <span class="math inline">\(\sigma\)</span>; lamentablemente no existe una ejemplificación natural de esta variable, sino que se hace uso de ella de manera funcional, tal como se muestra en la figura <a href="modelos-de-v.a-continua.html#fig:normal">1.7</a>. Más adelante, veremos como estudiar si una variable tiene una posible distribución normal.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:normal"></span>
+<img src="documento_files/figure-html/normal-1.png" alt="Ejemplo distribucióin normal" width="960" />
+<p class="caption">
+Figure 1.7: Ejemplo distribucióin normal
+</p>
+</div>
+<p>EN los capítulos siguientes, haremos uso de estas y otras distribuciones en el desarrollo de ejercicios.</p>
 </div>
 </div>
             </section>
