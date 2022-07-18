@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>1.5 Modelos de v.a continua | Inferencia Estadística</title>
   <meta name="description" content="1.5 Modelos de v.a continua | Inferencia Estadística" />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="1.5 Modelos de v.a continua | Inferencia Estadística" />
   <meta property="og:type" content="book" />
-  
   
   
   <meta name="github-repo" content="rstudio/bookdown-demo#" />
@@ -31,7 +30,6 @@
   
 <link rel="prev" href="función-generadora-de-momentos.html"/>
 <link rel="next" href="vectores-de-v.a-continuas.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -49,8 +47,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -209,13 +208,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="modelos-de-v.a-continua" class="section level2" number="1.5">
-<h2><span class="header-section-number">1.5</span> Modelos de v.a continua</h2>
+<div id="modelos-de-v.a-continua" class="section level2 hasAnchor" number="1.5">
+<h2><span class="header-section-number">1.5</span> Modelos de v.a continua<a href="modelos-de-v.a-continua.html#modelos-de-v.a-continua" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Los modelos de v.a intentan modelar fenómenos reales (valga la redundancia), sin embargo, esto nunca es cierto. Es bien sabido que en estadística ningún modelo es correcto, pero si son útiles y hacen un buen trabajo en general.</p>
-<p>En el caso de las v.a continuas, normalmente se da a conocer la función de densidad asociado a la variable aleatoria, a pesar de que el nombre contiene la palabra “Distribución.”</p>
+<p>En el caso de las v.a continuas, normalmente se da a conocer la función de densidad asociado a la variable aleatoria, a pesar de que el nombre contiene la palabra “Distribución”.</p>
 <p>A partir de aquí, revisaremos los 3 modelos de variables aleatorias más frecuentemente usados, más aún, daremos el detalle de la notación, su esperanza y varianza asociada.</p>
-<div id="distribución-uniforme" class="section level3" number="1.5.1">
-<h3><span class="header-section-number">1.5.1</span> Distribución Uniforme</h3>
+<div id="distribución-uniforme" class="section level3 hasAnchor" number="1.5.1">
+<h3><span class="header-section-number">1.5.1</span> Distribución Uniforme<a href="modelos-de-v.a-continua.html#distribución-uniforme" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Una variable aleatoria tiene <strong>distribución uniforme</strong> es una variable aleatoria que toma valores en el intervalo <span class="math inline">\((a,b)\)</span>, donde <span class="math inline">\(a&lt;b\)</span> son números arbitrarios. La función de densidad de una variable aleatoria uniforme está dada por:
 <span class="math display">\[\begin{equation}
 \notag
@@ -239,8 +238,8 @@ Figure 1.5: Ejemplo distribucióin uniforme
 </p>
 </div>
 </div>
-<div id="distribución-exponencial" class="section level3" number="1.5.2">
-<h3><span class="header-section-number">1.5.2</span> Distribución Exponencial</h3>
+<div id="distribución-exponencial" class="section level3 hasAnchor" number="1.5.2">
+<h3><span class="header-section-number">1.5.2</span> Distribución Exponencial<a href="modelos-de-v.a-continua.html#distribución-exponencial" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Una variable aleatoria <span class="math inline">\(X\)</span> tiene <strong>distribución exponencial</strong> con parámetro <span class="math inline">\(\lambda &gt;0\)</span>, si su densidad es
 <span class="math display">\[\begin{equation}
 \notag
@@ -264,8 +263,8 @@ Figure 1.6: Ejemplo distribucióin exponencial
 </p>
 </div>
 </div>
-<div id="distribución-normal" class="section level3" number="1.5.3">
-<h3><span class="header-section-number">1.5.3</span> Distribución Normal</h3>
+<div id="distribución-normal" class="section level3 hasAnchor" number="1.5.3">
+<h3><span class="header-section-number">1.5.3</span> Distribución Normal<a href="modelos-de-v.a-continua.html#distribución-normal" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Una variable aleatoria <span class="math inline">\(X\)</span> tiene <strong>distribución normal</strong> con parámetros <span class="math inline">\(\mu \in \mathrm{R}\)</span> y <span class="math inline">\(\sigma^2 \in \mathrm{R}^+\)</span>, si su densidad es
 <span class="math display">\[\begin{equation}
 \notag

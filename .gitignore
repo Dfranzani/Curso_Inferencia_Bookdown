@@ -4,3 +4,5 @@
 !docs/documento_files/
 !docs/libs/
 !README.md
+!LICENSE.md
+!.Rbuildignore

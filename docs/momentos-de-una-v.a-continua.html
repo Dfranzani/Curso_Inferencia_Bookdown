@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>1.3 Momentos de una v.a continua | Inferencia Estadística</title>
   <meta name="description" content="1.3 Momentos de una v.a continua | Inferencia Estadística" />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="1.3 Momentos de una v.a continua | Inferencia Estadística" />
   <meta property="og:type" content="book" />
-  
   
   
   <meta name="github-repo" content="rstudio/bookdown-demo#" />
@@ -31,7 +30,6 @@
   
 <link rel="prev" href="función-de-densidad-y-distribución.html"/>
 <link rel="next" href="función-generadora-de-momentos.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -49,8 +47,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -209,11 +208,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="momentos-de-una-v.a-continua" class="section level2" number="1.3">
-<h2><span class="header-section-number">1.3</span> Momentos de una v.a continua</h2>
-<div id="esperanza" class="section level3" number="1.3.1">
-<h3><span class="header-section-number">1.3.1</span> Esperanza</h3>
-<p>EL concepto de esperanza se entiendo como “el valor esperado en un <em>experimento</em>.” Sin embargo, podemos dotar de exactitud a este concepto mediante la siguiente definición.</p>
+<div id="momentos-de-una-v.a-continua" class="section level2 hasAnchor" number="1.3">
+<h2><span class="header-section-number">1.3</span> Momentos de una v.a continua<a href="momentos-de-una-v.a-continua.html#momentos-de-una-v.a-continua" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="esperanza" class="section level3 hasAnchor" number="1.3.1">
+<h3><span class="header-section-number">1.3.1</span> Esperanza<a href="momentos-de-una-v.a-continua.html#esperanza" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>EL concepto de esperanza se entiendo como “el valor esperado en un <em>experimento</em>”. Sin embargo, podemos dotar de exactitud a este concepto mediante la siguiente definición.</p>
 <p><strong>Definición:</strong> Dado un espacio de probabilidad y una función <span class="math inline">\(g(X(\omega))\)</span> sobre la variable aleatoria continua <span class="math inline">\(X\)</span>. La esperanza o media de <span class="math inline">\(g(X)\)</span> esta dada por</p>
 <p><span class="math display" id="eq:esperanza">\[\begin{equation}
 E_X\lbrace g(X) \rbrace = \int_{-\infty}^{\infty}g(x)f_X(x)dx
@@ -246,7 +245,7 @@ Figure 1.2: Función densidad y valor esperado.
 </p>
 </div>
 <p><strong>Nota</strong>: el valor esperado nunca debe depender de la variable aleatoria, pero si puede depender de constantes, tal como sucede en el ejemplo.’</p>
-<p>Como se pudo apreciar, el valor de esperanza está influenciado por la expresión de la función <span class="math inline">\(g\)</span>. En este sentido, cuando <span class="math inline">\(g\)</span> corresponde a la función identidad, estaremos hablando el promedio “usual,” para otros valores de <span class="math inline">\(g\)</span> es necesario saber interpretar, por ejemplo si <span class="math inline">\(g = X^2\)</span>, estaremos obteniendo el promedio de los valores al cuadrado.</p>
+<p>Como se pudo apreciar, el valor de esperanza está influenciado por la expresión de la función <span class="math inline">\(g\)</span>. En este sentido, cuando <span class="math inline">\(g\)</span> corresponde a la función identidad, estaremos hablando el promedio “usual”, para otros valores de <span class="math inline">\(g\)</span> es necesario saber interpretar, por ejemplo si <span class="math inline">\(g = X^2\)</span>, estaremos obteniendo el promedio de los valores al cuadrado.</p>
 <p>Por último, algunas propiedades de la esperanza son:</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(E_X(a\cdot g(X)+b) = aE_X(g(X))+b\)</span>.</li>
@@ -254,8 +253,8 @@ Figure 1.2: Función densidad y valor esperado.
 <li>Si <span class="math inline">\(g(X)\geq 0\)</span> para todo <span class="math inline">\(x\)</span>, entonces <span class="math inline">\(E_X(g(X))\geq 0\)</span>.</li>
 </ol>
 </div>
-<div id="momentos" class="section level3" number="1.3.2">
-<h3><span class="header-section-number">1.3.2</span> Momentos</h3>
+<div id="momentos" class="section level3 hasAnchor" number="1.3.2">
+<h3><span class="header-section-number">1.3.2</span> Momentos<a href="momentos-de-una-v.a-continua.html#momentos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Los momentos están definidos en base a la esperanza. En este sentido, para cada entero <span class="math inline">\(n\)</span>, el n - ésimo <strong>momento</strong> de una variable aleatoria <span class="math inline">\(X\)</span> es:</p>
 <p><span class="math display" id="eq:momentos">\[\begin{equation}
 \mu&#39;_n = E_X(X^n).
@@ -279,8 +278,8 @@ Figure 1.2: Función densidad y valor esperado.
 <li><p>El 4to momento centrado es una medida de la “altura” de unan distribución, en comparación a un distribución normal con la misma varianza.</p></li>
 </ol>
 </div>
-<div id="varianza-y-desviación-estándar" class="section level3" number="1.3.3">
-<h3><span class="header-section-number">1.3.3</span> Varianza y Desviación Estándar</h3>
+<div id="varianza-y-desviación-estándar" class="section level3 hasAnchor" number="1.3.3">
+<h3><span class="header-section-number">1.3.3</span> Varianza y Desviación Estándar<a href="momentos-de-una-v.a-continua.html#varianza-y-desviación-estándar" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Los conceptos de varianza y desviación estándar no son ajenos, seguramente ya han conocido ciertas fórmulas para determinarlas. Sin embargo, una definición más formal es:</p>
 <p><strong>Definición:</strong> La varianza de una v.a <span class="math inline">\(X\)</span>, es el segundo momento central</p>
 <p><span class="math display" id="eq:varianza">\[\begin{equation}
@@ -319,8 +318,8 @@ Var_X(X) &amp;= E_X\lbrace (X-\mu)^2 \rbrace\\
 <li><p><span class="math inline">\(Var_X(X) = E_X(X^2) - [E_X(X)]^2\)</span>.</p></li>
 </ol>
 </div>
-<div id="momentos-normalizados" class="section level3" number="1.3.4">
-<h3><span class="header-section-number">1.3.4</span> Momentos normalizados</h3>
+<div id="momentos-normalizados" class="section level3 hasAnchor" number="1.3.4">
+<h3><span class="header-section-number">1.3.4</span> Momentos normalizados<a href="momentos-de-una-v.a-continua.html#momentos-normalizados" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Los momentos normalizados son similares a los momentos centrales, pero incorporan la n-pontencia de la desviación estándar de la variable aleatoria.</p>
 <p><span class="math display" id="eq:momentonormal">\[\begin{equation}
 \beta_n = \frac{E_X\lbrace(X-\mu)^n\rbrace}{\sigma_X^n}
